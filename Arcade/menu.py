@@ -1,13 +1,14 @@
 import adivinhacao
 import forca
-import main
+import palavra_embaralhada
 import pedra_papel_tesoura
+import placar
 import quiz_enigmas
 import velha
 
 
 def exibir_menu(nome_jogador):
-    total = main.obter_total(nome_jogador)
+    total = placar.obter_total(nome_jogador)
     print("\n===================================")
     print("BEM-VINDO AO PYTHON ARCADE")
     print("===================================")
@@ -17,7 +18,8 @@ def exibir_menu(nome_jogador):
     print("3 - Jogo da Velha")
     print("4 - Quiz e Enigmas")
     print("5 - Pedra, Papel e Tesoura")
-    print("6 - Ver tabela detalhada de pontos")
+    print("6 - Palavra Embaralhada")
+    print("7 - Ver tabela detalhada de pontos")
     print("0 - Sair da Plataforma")
 
 
@@ -33,7 +35,9 @@ def executar_jogo(escolha, nome_jogador):
     if escolha == 5:
         return pedra_papel_tesoura.jogar(nome_jogador)
     if escolha == 6:
-        main.exibir_tabela_pontos(nome_jogador)
+        return palavra_embaralhada.jogar()
+    if escolha == 7:
+        placar.exibir_tabela_pontos(nome_jogador)
         return None
     return 0
 
@@ -44,7 +48,7 @@ def iniciar_plataforma():
     if not nome_jogador:
         nome_jogador = "Jogador"
 
-    main.garantir_jogador(nome_jogador)
+    placar.garantir_jogador(nome_jogador)
 
     while True:
         exibir_menu(nome_jogador)
@@ -56,25 +60,29 @@ def iniciar_plataforma():
             continue
 
         if escolha == 0:
-            main.exibir_resumo_jogador(nome_jogador)
-            main.exibir_ranking_final()
+            placar.exibir_resumo_jogador(nome_jogador)
+            placar.exibir_ranking_final()
             print("\nObrigado por jogar! Ate a proxima.")
             break
 
-        if escolha not in main.NOMES_DOS_JOGOS and escolha != 6:
+        if escolha not in placar.NOMES_DOS_JOGOS and escolha != 7:
             print("Opcao invalida! Escolha um numero do menu.")
             continue
 
         pontos = executar_jogo(escolha, nome_jogador)
 
-        if escolha == 6:
+        if escolha == 7:
             continue
 
-        main.registrar_pontos(nome_jogador, main.NOMES_DOS_JOGOS[escolha], pontos)
+        placar.registrar_pontos(
+            nome_jogador,
+            placar.NOMES_DOS_JOGOS[escolha],
+            pontos,
+        )
 
         print(
             f"\nPontuacao atualizada: {nome_jogador} agora tem "
-            f"{main.obter_total(nome_jogador)} ponto(s)."
+            f"{placar.obter_total(nome_jogador)} ponto(s)."
         )
 
 
