@@ -1,13 +1,13 @@
-"""Bibliotecas, os permite usar comandos do sistema operacional"""
+# Bibliotecas, os permite usar comandos do sistema operacional
 import os
 import random
 
-"""Função para limpar o terminal"""
+# Função para limpar o terminal
 def limpar_tela():
     os.system("cls" if os.name == "nt" else "clear")
 
 
-"""Função com parametro digitado pelo jogador ou sorteado pelo computador"""
+# Função com parametro digitado pelo jogador ou sorteado pelo computador
 def pegar_nome_opcao(escolha):
     if escolha == 1:
         return "Pedra"
@@ -105,7 +105,7 @@ def jogar_vs_jogador():
     return 0
 
 
-"""Menu do jogo"""
+# Menu do jogo
 def jogar(nome_jogador):
     pontuacao_total_jogo = 0
 

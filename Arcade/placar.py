@@ -1,12 +1,11 @@
 PLACAR_GERAL = {}
 
 NOMES_DOS_JOGOS = {
-    1: "Jogo da Adivinhacao",
-    2: "Jogo da Forca",
-    3: "Jogo da Velha",
-    4: "Quiz e Enigmas",
-    5: "Pedra, Papel e Tesoura",
-    6: "Palavra Embaralhada",
+    1: "Jogo da Forca",
+    2: "Jogo da Velha",
+    3: "Quiz e Enigmas",
+    4: "Pedra, Papel e Tesoura",
+    5: "Palavra Embaralhada",
 }
 
 
