@@ -18,7 +18,8 @@ def exibir_menu(nome_jogador):
     print("3 - Jogo da Velha")
     print("4 - Quiz e Enigmas")
     print("5 - Pedra, Papel e Tesoura")
-    print("6 - Ver tabela detalhada de pontos")
+    print("6 - Palavra Embaralhada")
+    print("7 - Ver tabela detalhada de pontos")
     print("0 - Sair da Plataforma")
 
 
