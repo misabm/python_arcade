@@ -1,3 +1,4 @@
+"""Bibliotecas, os permite usar comandos do sistema operacional"""
 import os
 import random
 

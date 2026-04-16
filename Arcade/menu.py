@@ -18,8 +18,7 @@ def exibir_menu(nome_jogador):
     print("3 - Jogo da Velha")
     print("4 - Quiz e Enigmas")
     print("5 - Pedra, Papel e Tesoura")
-    print("6 - Palavra Embaralhada")
-    print("7 - Ver tabela detalhada de pontos")
+    print("6 - Ver tabela detalhada de pontos")
     print("0 - Sair da Plataforma")
 
 
@@ -55,6 +54,22 @@ def iniciar_plataforma():
 
         try:
             escolha = int(input("Escolha seu jogo: "))
+
+            if escolha == 1:
+                pontuacao_total += adivinhacao.jogar()
+            elif escolha == 2:
+                pontuacao_total += forca.jogar()
+            elif escolha == 3:
+                velha.jogar()
+            elif escolha == 4:
+                pontuacao_total += quiz_enigmas.jogar()
+            elif escolha == 5:
+                pontuacao_total += pedra_papel_tesoura.jogar(nome_jogador)
+            elif escolha == 0:
+                print("Obrigado por jogar! Até a próxima.")
+                break
+            else:
+                print("Opção inválida! Escolha um número do menu.")
         except ValueError:
             print("Erro: por favor, digite apenas numeros.")
             continue
