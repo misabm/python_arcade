@@ -1,11 +1,12 @@
 import os
 import random
 
-
+"""Função para limpar o terminal"""
 def limpar_tela():
     os.system("cls" if os.name == "nt" else "clear")
 
 
+"""Função com parametro digitado pelo jogador ou sorteado pelo computador"""
 def pegar_nome_opcao(escolha):
     if escolha == 1:
         return "Pedra"
@@ -16,7 +17,7 @@ def pegar_nome_opcao(escolha):
 
 def verificar_vencedor(jogo1, jogo2):
     if jogo1 == jogo2:
-        return 0
+        return 0 
 
     if (jogo1 == 1 and jogo2 == 3) or (jogo1 == 2 and jogo2 == 1) or (jogo1 == 3 and jogo2 == 2):
         return 1
@@ -103,6 +104,7 @@ def jogar_vs_jogador():
     return 0
 
 
+"""Menu do jogo"""
 def jogar(nome_jogador):
     pontuacao_total_jogo = 0
 

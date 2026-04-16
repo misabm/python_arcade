@@ -1,8 +1,8 @@
-import adivinhacao
-import forca
-import velha
-import quiz_enigmas
-import pedra_papel_tesoura
+import adivinhacao as adivinhacao
+import forca as forca
+import velha as velha
+import quiz_enigmas as quiz_enigmas
+import pedra_papel_tesoura as pedra_papel_tesoura
 
 
 def iniciar_plataforma():
@@ -41,7 +41,3 @@ def iniciar_plataforma():
                 print("Opção inválida! Escolha um número do menu.")
         except ValueError:
             print("Erro: Por favor, digite apenas números!")
-
-
-if __name__ == "__main__":
-    iniciar_plataforma()
