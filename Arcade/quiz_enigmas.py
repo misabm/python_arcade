@@ -1,10 +1,6 @@
 PONTOS_POR_ACERTO = 10
 
 def carregar_banco_perguntas():
-    """
-    Retorna um Dicionário onde a chave é a pergunta e o valor é uma Tupla.
-    A Tupla contém as 4 alternativas e o número da resposta correta no final.
-    """
     return {
         "O que tem pescoço mas não tem cabeça?": ("Uma camisola", "Uma garrafa", "Um vaso", "Uma cadeira", 2),
         "Sou alto quando jovem e baixo quando velho. O que sou?": ("Um lápis", "Uma árvore", "Um prédio", "Um rio", 1),

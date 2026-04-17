@@ -1,5 +1,7 @@
 import random 
 
+PONTOS_POR_VITORIA = 10
+
 def jogar_forca():
     print("="*40)
     print("BEM-VINDO AO JOGO DA FORCA!")
@@ -57,9 +59,11 @@ def jogar_forca():
     print("\n" + "="*40)
     
     if "_" not in tracinhos:
-        print(f"PARABÉNS! Você venceu! A palavra era: {palavra_oculta}")
+            print(f"\n🏆 PARABÉNS! Você descobriu a palavra: {palavra_oculta}")
+            print(f"Você ganhou {PONTOS_POR_VITORIA} pontos!")
+            pontuacao_total_sessao += PONTOS_POR_VITORIA
     else:
-        print(f"FIM DE JOGO! Suas vidas acabaram. A palavra era: {palavra_oculta}")
-
-if __name__ == "__main__":
-    jogar_forca()
+            print(f"\n💀 INFELIZMENTE VOCÊ PERDEU!")
+            print(f"A palavra era: {palavra_oculta}")
+    
+    return pontuacao_total_sessao

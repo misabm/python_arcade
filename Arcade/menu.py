@@ -23,7 +23,7 @@ def exibir_menu(nome_jogador):
 
 def executar_jogo(escolha, nome_jogador):
     if escolha == 1:
-        return forca.jogar()
+        return forca.jogar_forca()
     if escolha == 2:
         return velha.jogar()
     if escolha == 3:
