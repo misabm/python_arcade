@@ -3,6 +3,7 @@ import random
 PONTOS_POR_VITORIA = 10
 
 def jogar_forca():
+    pontuacao_total_sessao = 0
     print("="*40)
     print("BEM-VINDO AO JOGO DA FORCA!")
     print("="*40)
